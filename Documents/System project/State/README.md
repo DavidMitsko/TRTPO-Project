@@ -19,4 +19,6 @@
 <a name="add"/>
 
 # 3 Добавить поездку
-![Добавить поездку](../../../Images/System%20design/Createtrip_state.jpg)
+![Добавить поездку](../../../Images/System%20design/Createtrip_state.jgp)
+
+
