@@ -35,8 +35,8 @@ public class AddTripWindow extends Activity {
     }
 
     public void loadNewTrip(View view) {
-        if(pointOfDeparture.getText().toString().equals("") || destination.getText().toString().equals("")
-                || dataDep.getText().toString().equals("") || timeDep.getText().toString().equals("")){
+        if (pointOfDeparture.getText().toString().equals("") || destination.getText().toString().equals("")
+                || dataDep.getText().toString().equals("") || timeDep.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Вы заполнили не все обязательные поля"
                     , Toast.LENGTH_SHORT).show();
             return;

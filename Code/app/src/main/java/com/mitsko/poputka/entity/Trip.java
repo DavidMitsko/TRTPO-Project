@@ -119,7 +119,8 @@ public class Trip {
                 ", data='" + data + '\'' +
                 ", time='" + time + '\'' +
                 ", comments='" + comments + '\'' +
-                ", uid=" + uid +
+                ", uid='" + uid + '\'' +
+                ", order=" + order +
                 '}';
     }
 }

@@ -31,7 +31,7 @@ public class MenuWindow extends Activity {
         startActivity(intent);
     }
 
-    public void myTrips(View view){
+    public void myTrips(View view) {
         Intent intent = new Intent(MenuWindow.this, MyTripsWindow.class);
         startActivity(intent);
     }

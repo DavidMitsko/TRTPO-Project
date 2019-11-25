@@ -74,7 +74,7 @@ public class TripControllerImpl implements TripController {
     }
 
     @Override
-    public List<Trip> takeAllUsersTrip(){
+    public List<Trip> takeAllUsersTrip() {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         TripService tripServiceImpl = serviceFactory.getTripServiceImpl();
 

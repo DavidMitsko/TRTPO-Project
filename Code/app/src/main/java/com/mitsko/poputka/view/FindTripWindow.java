@@ -27,8 +27,8 @@ public class FindTripWindow extends Activity {
     }
 
     public void find(View view) {
-        if(pointOfDepart.getText().toString().equals("") || destination.getText().toString().equals("")
-                || dataDep.getText().toString().equals("") || timeDep.getText().toString().equals("")){
+        if (pointOfDepart.getText().toString().equals("") || destination.getText().toString().equals("")
+                || dataDep.getText().toString().equals("") || timeDep.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Вы заполнили не все обязательные поля"
                     , Toast.LENGTH_SHORT).show();
             return;
