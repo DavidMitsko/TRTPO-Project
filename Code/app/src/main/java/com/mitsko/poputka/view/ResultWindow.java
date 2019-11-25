@@ -24,10 +24,6 @@ public class ResultWindow extends Activity {
 
         tripController = TripControllerImpl.getInstance();
         listView = findViewById(R.id.result);
-        /*ScrollView scrollView = findViewById(R.id.scrollView);
-        LinearLayout scrollView1 = findViewById(R.id.result);
-        //scrollView1.
-        LinearLayout scrollView2 = //new ScrollView(scrollView.getContext());*/
 
         String pointOfDeparture = getIntent().getExtras().getString("point of departure");
         String destination = getIntent().getExtras().getString("destination");

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.mitsko.poputka.R;
 import com.mitsko.poputka.controller.UserController;
@@ -38,9 +37,7 @@ public class ProfileWindow extends Activity {
         switch (requestCode) {
             case GALLERY_REQUEST:
                 if (resultCode == RESULT_OK) {
-                    //Uri selectedImage = imageReturnedIntent.getData();
                     photo = imageReturnedIntent.getData();
-                    //imageView.setImageURI(selectedImage);
                     imageView.setImageURI(photo);
                 }
         }
@@ -50,36 +47,13 @@ public class ProfileWindow extends Activity {
         String email = getIntent().getExtras().getString("email");
         String password = getIntent().getExtras().getString("password");
 
-        //ImageView imageView = (ImageView) findViewById(R.id.imageView2);
         EditText editText = findViewById(R.id.editText11);
-        /*User user = new User();
-        user.setId("01");
-        user.getProfile().setPhoto(photo);
-        user.getProfile().setName(editText.getText().toString());*/
 
-        //Controller controller = Controller.getInstance(email, password
-        //, editText.getText().toString(), photo);//new Controller(email, password, editText.getText().toString(), photo);
-
-        UserController controller = UserControllerImpl.getInstance();//Controller controller = Controller.getInstance();
+        UserController controller = UserControllerImpl.getInstance();
         controller.createUser(email, password, editText.getText().toString(), photo);
 
         Intent intent = new Intent(ProfileWindow.this, MenuWindow.class);
         startActivity(intent);
-
-        //UserDAO userDAO = new UserFirebaseDAOImpl();
-
-        // userDAO.signOut();//??????????????????????????????????????????/
-
-        /*if(userDAO.addUser(email, password, user)){
-            editText.setText("Ura");
-            Intent intent = new Intent(ProfileWindow.this, MenuWindow.class);
-            startActivity(intent);
-        }else {
-            editText.setText("Loh");
-            /*Toast.makeText(getApplicationContext(), "Error"
-                    , Toast.LENGTH_SHORT).show();
-        }*/
-        //editText.setText(userDAO.addUser(email, password, user));
     }
 
     public void goBack(View view) {

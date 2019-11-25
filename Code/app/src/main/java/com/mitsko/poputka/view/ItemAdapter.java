@@ -13,7 +13,6 @@ import com.mitsko.poputka.controller.TripController;
 import com.mitsko.poputka.controller.impl.TripControllerImpl;
 import com.mitsko.poputka.entity.Trip;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ItemAdapter extends ArrayAdapter<Trip> {

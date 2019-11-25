@@ -32,7 +32,6 @@ public class TripServiceImpl implements TripService {
         DAOFactory daoFactory = DAOFactory.getInstance();
         TripDAO tripDAOImpl = daoFactory.getTripDAOImpl();
 
-        //List<Trip> trips = (List<Trip>)tripDAOImpl.takeAllTrips().values();
         Map<String, Trip> map = tripDAOImpl.takeAllTrips();
         Set<Map.Entry<String, Trip>> set = map.entrySet();
         List<Trip> trips = new ArrayList<>();
@@ -53,8 +52,13 @@ public class TripServiceImpl implements TripService {
         DAOFactory daoFactory = DAOFactory.getInstance();
         TripDAO tripDAOImpl = daoFactory.getTripDAOImpl();
 
-        List<Trip> trips = (List<Trip>) tripDAOImpl.takeAllTrips().values();
-        trips = findTripsByUid(trips, uid);
+        Map<String, Trip> map = tripDAOImpl.takeAllTrips();
+        Set<Map.Entry<String, Trip>> set = map.entrySet();
+        List<Trip> trips = new ArrayList<>();
+
+        for (Map.Entry<String, Trip> trip : set) {
+            trips.add(trip.getValue());
+        }
 
         return trips;
     }

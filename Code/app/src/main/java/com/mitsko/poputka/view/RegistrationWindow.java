@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mitsko.poputka.R;
-import com.mitsko.poputka.entity.SignInInfo;
 
 public class RegistrationWindow extends Activity {
 

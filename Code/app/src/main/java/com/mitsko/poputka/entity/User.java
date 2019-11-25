@@ -1,7 +1,5 @@
 package com.mitsko.poputka.entity;
 
-import java.util.Objects;
-
 public class User {
     private Profile profile;
     private String id;

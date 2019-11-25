@@ -2,7 +2,6 @@ package com.mitsko.poputka.dao.impl;
 
 import android.app.Activity;
 import android.net.Uri;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -106,14 +105,6 @@ public class UserFirebaseDAOImpl extends Activity implements UserDAO {
                 .setDisplayName(name)
                 .build();
         user.updateProfile(profileUpdates);
-                /*.addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        /*if (task.isSuccessful()) {
-
-                        }
-                    }
-                });*/
     }
 
     private void signInProfileWithPhoto(String name, Uri photo) {
@@ -123,13 +114,5 @@ public class UserFirebaseDAOImpl extends Activity implements UserDAO {
                 .setPhotoUri(photo)
                 .build();
         user.updateProfile(profileUpdates);
-                /*.addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-
-                        }
-                    }
-                });*/
     }
 }

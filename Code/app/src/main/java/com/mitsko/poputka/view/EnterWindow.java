@@ -34,33 +34,11 @@ public class EnterWindow extends Activity {
             return;
         }
 
-        /*SignInInfo signInInfo = new SignInInfo(email.getText().toString()
-                , password.getText().toString());*/
-
         UserController controller = UserControllerImpl.getInstance();
         controller.signIn(email.getText().toString(), password.getText().toString());
 
         Intent intent = new Intent(EnterWindow.this, MenuWindow.class);
         startActivity(intent);
-        //UserDAO userDAO = new UserFirebaseDAOImpl();
-
-        //userDAO.signOut();
-
-         /*String user = userDAO.signInUser(email.getText().toString()
-                 , password.getText().toString());
-         if(user.equals("sign in")){
-             email.setText("cool");
-             /*Intent intent = new Intent(EnterWindow.this, MenuWindow.class);
-             startActivity(intent);
-         } else if(user.equals("error")){
-           //email.setText("loh");
-             Toast.makeText(getApplicationContext(), "Error"
-                     , Toast.LENGTH_SHORT).show();
-         }else if(user.equals("xz")){
-             email.setText(user);
-         } else if(user.equals("exist")){
-             email.setText(user);
-         }*/
     }
 
     public void goBack(View view) {
