@@ -48,6 +48,7 @@
         android:layout_marginLeft="99dp"
         android:layout_marginBottom="182dp"
         android:text="мои поездки"
+        android:onClick="myTrips"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

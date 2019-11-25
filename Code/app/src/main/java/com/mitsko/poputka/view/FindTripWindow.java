@@ -5,13 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.mitsko.poputka.R;
-import com.mitsko.poputka.controller.TripController;
-import com.mitsko.poputka.controller.impl.TripControllerImpl;
 
 public class FindTripWindow extends Activity {
-    private TripController tripController;
 
     private EditText pointOfDepart;
     private EditText destination;
@@ -26,11 +24,16 @@ public class FindTripWindow extends Activity {
         destination = findViewById(R.id.destination);
         dataDep = findViewById(R.id.dataDep);
         timeDep = findViewById(R.id.timeDep);
-
-        tripController = TripControllerImpl.getInstance();
     }
 
     public void find(View view) {
+        if(pointOfDepart.getText().toString().equals("") || destination.getText().toString().equals("")
+                || dataDep.getText().toString().equals("") || timeDep.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), "Вы заполнили не все обязательные поля"
+                    , Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Intent intent = new Intent(FindTripWindow.this, ResultWindow.class);
         intent.putExtra("point of departure", pointOfDepart.getText().toString());
         intent.putExtra("destination", destination.getText().toString());

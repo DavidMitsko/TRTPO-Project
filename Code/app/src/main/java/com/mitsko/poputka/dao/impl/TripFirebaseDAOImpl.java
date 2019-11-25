@@ -48,6 +48,9 @@ public class TripFirebaseDAOImpl extends Activity implements TripDAO {
                         update(newMapTrip);
                     }
                 });
+        map.put("0", new Trip("Brest", "Minsk", "12.02.2019", "15:00", "0123"));
+        map.put("1", new Trip("Brest", "Minsk", "12.02.2019", "15:00", "4567"));
+
         return map;
     }
 

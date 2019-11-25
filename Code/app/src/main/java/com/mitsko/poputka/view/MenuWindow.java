@@ -31,6 +31,11 @@ public class MenuWindow extends Activity {
         startActivity(intent);
     }
 
+    public void myTrips(View view){
+        Intent intent = new Intent(MenuWindow.this, MyTripsWindow.class);
+        startActivity(intent);
+    }
+
     public void exit(View view) {
         userController.signOut();
         finish();

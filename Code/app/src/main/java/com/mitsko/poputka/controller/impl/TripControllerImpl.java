@@ -1,6 +1,7 @@
 package com.mitsko.poputka.controller.impl;
 
 import com.mitsko.poputka.controller.TripController;
+import com.mitsko.poputka.controller.UserController;
 import com.mitsko.poputka.entity.Trip;
 import com.mitsko.poputka.service.ServiceFactory;
 import com.mitsko.poputka.service.TripService;
@@ -19,45 +20,41 @@ public class TripControllerImpl implements TripController {
     }
 
     @Override
-    public boolean addTrip(String pointOfDeparture, String destination
+    public void addTrip(String pointOfDeparture, String destination
             , String data, String time, String comments) {
 
         String uid = UserControllerImpl.getInstance().getT().getId();
 
-        Trip newTrip = new Trip(pointOfDeparture, destination, data, time, comments, uid);
+        trip = new Trip(pointOfDeparture, destination, data, time, comments, uid);
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         TripService tripServiceImpl = serviceFactory.getTripServiceImpl();
 
-        tripServiceImpl.addTrip(newTrip);
-
-        return true;
+        tripServiceImpl.addTrip(trip);
     }
 
     @Override
-    public boolean addTrip(String pointOfDeparture, String destination, String data, String time) {
+    public void addTrip(String pointOfDeparture, String destination, String data, String time) {
         String uid = UserControllerImpl.getInstance().getT().getId();
 
-        Trip newTrip = new Trip(pointOfDeparture, destination, data, time, uid);
+        trip = new Trip(pointOfDeparture, destination, data, time, uid);
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         TripService tripServiceImpl = serviceFactory.getTripServiceImpl();
 
-        tripServiceImpl.addTrip(newTrip);
-
-        return true;
+        tripServiceImpl.addTrip(trip);
     }
 
     @Override
     public List<Trip> takeAllTrips(String pointOfDeparture, String destination, String data, String time) {
         String uid = UserControllerImpl.getInstance().getT().getId();
 
-        Trip newTrip = new Trip(pointOfDeparture, destination, data, time, uid);
+        trip = new Trip(pointOfDeparture, destination, data, time, uid);
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         TripService tripServiceImpl = serviceFactory.getTripServiceImpl();
 
-        List<Trip> trips = tripServiceImpl.findTrips(newTrip);
+        List<Trip> trips = tripServiceImpl.findTrips(trip);
 
         return trips;
     }
@@ -74,5 +71,18 @@ public class TripControllerImpl implements TripController {
     @Override
     public Trip getT() {
         return trip;
+    }
+
+    @Override
+    public List<Trip> takeAllUsersTrip(){
+        ServiceFactory serviceFactory = ServiceFactory.getInstance();
+        TripService tripServiceImpl = serviceFactory.getTripServiceImpl();
+
+        String uid = UserControllerImpl.getInstance().getT().getId();
+
+        List<Trip> trips;
+        trips = tripServiceImpl.takeAllUsersTrip(uid);
+
+        return trips;
     }
 }

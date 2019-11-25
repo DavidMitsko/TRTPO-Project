@@ -23,27 +23,27 @@ public class RegistrationWindow extends Activity {
         EditText againPassword = findViewById(R.id.againPasswordText);
 
         if (email.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Please, enter your email"
+            Toast.makeText(getApplicationContext(), "Вы не ввели адрес электронной почты"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
         if (password.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Please, enter your password"
+            Toast.makeText(getApplicationContext(), "Вы не ввели пароль"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
         if (againPassword.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Please, enter your password again"
+            Toast.makeText(getApplicationContext(), "Вы не ввели пароль повторно"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
         if (password.getText().equals(againPassword.getText())) {
-            Toast.makeText(getApplicationContext(), "Please, enter your password again"
+            Toast.makeText(getApplicationContext(), "Ваши введённые пароли не совпадают"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
         if (password.getText().toString().length() < 5) {
-            Toast.makeText(getApplicationContext(), "Your password is to short"
+            Toast.makeText(getApplicationContext(), "Ваш пароль слишком лёгкий"
                     , Toast.LENGTH_SHORT).show();
             return;
         }

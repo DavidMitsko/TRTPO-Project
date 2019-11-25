@@ -24,12 +24,12 @@ public class EnterWindow extends Activity {
         EditText password = findViewById(R.id.passwordEnterText);
 
         if (email.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Please, enter your email"
+            Toast.makeText(getApplicationContext(), "Вы не ввели адрес своей электронной почты"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
         if (password.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Please, enter your password"
+            Toast.makeText(getApplicationContext(), "Вы не ввели пароль"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
