@@ -1,4 +1,4 @@
-package com.mitsko.poputka;
+package com.mitsko.poputka; //tratata
 
 import androidx.appcompat.app.AppCompatActivity;
 
