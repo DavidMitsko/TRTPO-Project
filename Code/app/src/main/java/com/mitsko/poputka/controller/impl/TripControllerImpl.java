@@ -1,7 +1,6 @@
 package com.mitsko.poputka.controller.impl;
 
 import com.mitsko.poputka.controller.TripController;
-import com.mitsko.poputka.controller.UserController;
 import com.mitsko.poputka.entity.Trip;
 import com.mitsko.poputka.service.ServiceFactory;
 import com.mitsko.poputka.service.TripService;
