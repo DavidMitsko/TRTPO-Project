@@ -11,7 +11,7 @@ import com.mitsko.poputka.controller.impl.UserControllerImpl;
 
 public class MenuWindow extends Activity {
 
-    UserController userController;
+    UserController userController; //access modifier is lost
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

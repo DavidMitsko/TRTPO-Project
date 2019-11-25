@@ -20,7 +20,7 @@ public class TripControllerImpl implements TripController {
 
     @Override
     public void addTrip(String pointOfDeparture, String destination
-            , String data, String time, String comments) {
+            , String data, String time, String comments) { //Poor method design
 
         String uid = UserControllerImpl.getInstance().getT().getId();
 

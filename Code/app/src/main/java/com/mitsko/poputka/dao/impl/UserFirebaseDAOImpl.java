@@ -18,7 +18,7 @@ import com.mitsko.poputka.entity.User;
 public class UserFirebaseDAOImpl extends Activity implements UserDAO {
 
     private FirebaseAuth mAuth;
-    User signInUser = new User();
+    User signInUser = new User(); //access modifier is lost
 
     public UserFirebaseDAOImpl() {
         mAuth = FirebaseAuth.getInstance();

@@ -19,7 +19,7 @@ public class ItemAdapter extends ArrayAdapter<Trip> {
     private LayoutInflater inflater;
     private int layout;
     private List<Trip> trips;
-    TripController tripController;
+    TripController tripController; //access modifier is lost
 
     ItemAdapter(Context context, int resource, List<Trip> trips) {
         super(context, resource, trips);

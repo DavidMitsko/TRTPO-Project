@@ -22,7 +22,7 @@ public class Trip {
     }
 
     public Trip(String pointOfDeparture, String destination, String data
-            , String time, String comments, String uid) {
+            , String time, String comments, String uid) { //Poor method design
         this.pointOfDeparture = pointOfDeparture;
         this.destination = destination;
         this.data = data;

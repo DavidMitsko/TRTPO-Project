@@ -20,6 +20,7 @@ public class TripFirebaseDAOImpl extends Activity implements TripDAO {
     private Map<String, Trip> map = new HashMap<>();
 
 
+    //free space
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference tripsRef = db.collection("Trips");
 
@@ -48,8 +49,8 @@ public class TripFirebaseDAOImpl extends Activity implements TripDAO {
                         update(newMapTrip);
                     }
                 });
-        map.put("0", new Trip("Brest", "Minsk", "12.02.2019", "15:00", "0123"));
-        map.put("1", new Trip("Brest", "Minsk", "12.02.2019", "15:00", "4567"));
+        map.put("0", new Trip("Brest", "Minsk", "12.02.2019", "15:00", "0123"));    //hard code
+        map.put("1", new Trip("Brest", "Minsk", "12.02.2019", "15:00", "4567"));    //hard code
 
         return map;
     }

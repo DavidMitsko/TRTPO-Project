@@ -18,7 +18,7 @@ public class AddTripWindow extends Activity {
     private EditText timeDep;
     private EditText comments;
 
-    TripController tripController;
+    TripController tripController; //access modifier is lost
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,13 @@ public class AddTripWindow extends Activity {
             return;
         }
         if (comments.getText().toString().equals("")) {
+            //Poor method design
             tripController.addTrip(pointOfDeparture.getText().toString()
                     , destination.getText().toString()
                     , dataDep.getText().toString()
                     , timeDep.getText().toString());
         } else {
+            //Poor method design
             tripController.addTrip(pointOfDeparture.getText().toString()
                     , destination.getText().toString()
                     , dataDep.getText().toString()

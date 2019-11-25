@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ResultWindow extends Activity {
     private TripController tripController;
-    ListView listView;
+    ListView listView; //access modifier is lost
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
