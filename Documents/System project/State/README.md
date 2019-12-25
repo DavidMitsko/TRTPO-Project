@@ -3,13 +3,13 @@
 
 # Содержание
 1 [Войти в учётную запись](#enter)   
-2 [Найти поездку](#find)
+2 [Найти поездку](#find)  
 3 [Добавить поездку](#add)
 
 <a name="enter"/>
 
 # 1 Войти в учётную запись
-![Войти в учётную запись](../../../Images/System%20design/Signin_state.jgp)
+![Войти в учётную запись](../../../Images/System%20design/Signin_state.jpg)
 
 <a name="find"/>
 
@@ -19,6 +19,6 @@
 <a name="add"/>
 
 # 3 Добавить поездку
-![Добавить поездку](../../../Images/System%20design/Createtrip_state.jgp)
+![Добавить поездку](../../../Images/System%20design/Createtrip_state.jpg)
 
 
